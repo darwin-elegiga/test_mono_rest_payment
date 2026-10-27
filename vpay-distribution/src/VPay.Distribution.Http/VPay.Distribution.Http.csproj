@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.Uris" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" />
+    <PackageReference Include="Refit.HttpClientFactory" />
+    <PackageReference Include="Refit.Insane.PowerPack" />
+    <PackageReference Include="Refit.Newtonsoft.Json" />
+    <PackageReference Include="VPay.Extensions.Caching.Abstractions" />
+    <PackageReference Include="VPay.Extensions.Caching.Memory" />
+    <PackageReference Include="VPay.Extensions.Http" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VPay.Distribution.Common\VPay.Distribution.Common.csproj" />
+  </ItemGroup>
+
+</Project>

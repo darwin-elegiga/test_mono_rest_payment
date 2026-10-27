@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <NoWarn>
+    </NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" />
+    <PackageReference Include="Microsoft.Extensions.Http" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
+    <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="Polly.Extensions.Http" />
+    <PackageReference Include="VPay.Data.Db2.Odbc" />
+    <PackageReference Include="VPay.DocSys.Common" />
+    <PackageReference Include="VPay.DocSys.Data" />
+    <PackageReference Include="VPay.DocSys.Storage" />
+    <PackageReference Include="VPay.Queuing" />
+  </ItemGroup>
+</Project>

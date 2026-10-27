@@ -1,0 +1,1 @@
+Alter table virtual_card.batch_detail alter column total_amount type NUMERIC(19,2);

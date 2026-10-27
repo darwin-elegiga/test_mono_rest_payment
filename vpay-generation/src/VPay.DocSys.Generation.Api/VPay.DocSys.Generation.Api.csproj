@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>58d35529-5e43-4f5a-b177-f0d061badc00</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <SonarQubeSetting Include="sonar.coverage.exclusions">
+      <Value>ConfigureHealthChecks.cs</Value>
+    </SonarQubeSetting>
+  </ItemGroup>
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+    <PackageReference Include="GlobalExceptionHandler" />
+    <PackageReference Include="MicroElements.Swashbuckle.FluentValidation" />
+    <PackageReference Include="Asp.Versioning.Mvc" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" PrivateAssets="All" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+    <PackageReference Include="VPay.DocSys.HealthChecks" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.AspNetcore" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.FileSystem" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.HttpEndpoint" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.MySql" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.Network" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.Odbc" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.Python" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.RabbitMQ" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.SqlServer" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.StorageManager" />
+    <PackageReference Include="VPay.DocSys.Storage" />
+    <PackageReference Include="VPay.Queuing.DependencyInjection" />
+	<PackageReference Include="System.Drawing.Common" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VPay.DocSys.Generation.Common\VPay.DocSys.Generation.Common.csproj" />
+    <ProjectReference Include="..\VPay.DocSys.Generation.Http\VPay.DocSys.Generation.Http.csproj" />
+    <ProjectReference Include="..\VPay.DocSys.Generation\VPay.DocSys.Generation.csproj" />
+    <ProjectReference Include="..\VPay.DocSys.Generation.Edi835.Application\VPay.DocSys.Generation.Edi835.Application.csproj" />
+  </ItemGroup>
+</Project>

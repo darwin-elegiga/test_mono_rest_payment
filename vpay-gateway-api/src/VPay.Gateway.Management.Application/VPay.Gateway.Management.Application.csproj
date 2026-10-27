@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" />
+    <PackageReference Include="MassTransit.RabbitMQ" />
+    <PackageReference Include="MediatR" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\database\VPay.Gateway.Data.Sql\VPay.Gateway.Data.Sql.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.Guidewire\VPay.Gateway.Common.Guidewire.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.Kubera\VPay.Gateway.Common.Kubera.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.PlatformConfig\VPay.Gateway.Common.PlatformConfig.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common\VPay.Gateway.Common.csproj" />
+  </ItemGroup>
+</Project>

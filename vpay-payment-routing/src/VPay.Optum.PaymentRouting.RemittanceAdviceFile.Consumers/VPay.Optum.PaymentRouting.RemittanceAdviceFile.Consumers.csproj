@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-VPay.Optum.PaymentRouting.RemittanceAdviceFile.Consumers-BC330CD3-5557-404E-84D5-433BA86435AD</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.11" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.23.0" />
+    <PackageReference Include="System.IO.Abstractions" Version="13.2.47" />
+    <PackageReference Include="VPay.Extensions.Caching.Memory" Version="2.0.0" />
+    <PackageReference Include="VPay.Extensions.Exceptions" Version="2.0.0" />
+    <PackageReference Include="VPay.Extensions.HealthChecks" Version="2.0.0" />
+    <PackageReference Include="VPay.Extensions.Logging.GrayLog" Version="2.0.0" />
+    <PackageReference Include="VPay.MassTransit.DependencyInjection" Version="3.0.8" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\VPay.Optum.PaymentRouting.Application\VPay.Optum.PaymentRouting.Application.csproj" />
+    <ProjectReference Include="..\VPay.Optum.PaymentRouting.Common\VPay.Optum.PaymentRouting.Common.csproj" />
+    <ProjectReference Include="..\VPay.Optum.PaymentRouting.Data.Sql\VPay.Optum.PaymentRouting.Data.Sql.csproj" />
+    <ProjectReference Include="..\VPay.Optum.PaymentRouting.InboundPayment.Application\VPay.Optum.PaymentRouting.InboundPayment.Application.csproj" />
+  </ItemGroup>
+
+</Project>

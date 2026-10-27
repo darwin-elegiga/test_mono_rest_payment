@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- <PackageReference Include="Azure.Core" Version="1.37.0" /> -->
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.9.1" />
+    <PackageReference Include="Azure.Storage.Common" Version="12.9.0" />
+    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.8.0" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Azure" Version="1.7.2" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.11" />
+    <PackageReference Include="VPay.Extensions.Caching.Memory" Version="2.0.0" />
+    <PackageReference Include="VPay.Extensions.HealthChecks" Version="2.0.0" />
+    <PackageReference Include="VPay.Extensions.Logging.GrayLog" Version="2.0.0" />
+    <PackageReference Include="VPay.MassTransit.DependencyInjection" Version="3.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VPay.Optum.PaymentRouting.InboundPayment.Application\VPay.Optum.PaymentRouting.InboundPayment.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>VPay.Optum.PaymentRouting.InboundPayment.Consumers.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+</Project>

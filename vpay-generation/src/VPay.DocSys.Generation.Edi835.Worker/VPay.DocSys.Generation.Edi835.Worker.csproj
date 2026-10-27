@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <UserSecretsId>dotnet-VPay.DocSys.Generation.Edi835.Worker-789543DA-4489-4397-BE2C-5D825FDAFAEA</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" />
+    <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="System.IO.Abstractions" />
+    <PackageReference Include="VPay.Data.Db2.Odbc" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.Odbc" />
+    <PackageReference Include="VPay.Extensions.HealthChecks" />
+    <PackageReference Include="VPay.Extensions.Logging.GrayLog" />
+    <PackageReference Include="VPay.Queuing" />
+    <PackageReference Include="VPay.Queuing.Abstractions" />
+    <PackageReference Include="VPay.Queuing.DependencyInjection" />
+    <PackageReference Include="System.Drawing.Common" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VPay.DocSys.Generation.Edi835.Application\VPay.DocSys.Generation.Edi835.Application.csproj" />
+    <ProjectReference Include="..\VPay.DocSys.Generation\VPay.DocSys.Generation.csproj" />
+  </ItemGroup>
+</Project>

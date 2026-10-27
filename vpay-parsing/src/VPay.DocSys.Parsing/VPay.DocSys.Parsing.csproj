@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <WarningsAsErrors>NU1605</WarningsAsErrors>
+    <NoWarn>1701;1702;1705</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ini-parser-netstandard" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="VPay.FileTransfer.Messaging" />
+    <PackageReference Include="VPay.Queuing.DependencyInjection" />
+    <PackageReference Include="VPay.Extensions.Ssh" />
+    <PackageReference Include="VPay.Extensions.Logging.GrayLog" />
+    <PackageReference Include="VPay.MassTransit.DependencyInjection" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VPay.DocSys.Parsing.Common\VPay.DocSys.Parsing.Common.csproj" />
+    <ProjectReference Include="..\VPay.DocSys.Parsing.Http\VPay.DocSys.Parsing.Http.csproj" />
+  </ItemGroup>
+  <PropertyGroup>
+    <!-- Explicitly generate Assembly Info -->
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>VPay.DocSys.Parsing.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+</Project>

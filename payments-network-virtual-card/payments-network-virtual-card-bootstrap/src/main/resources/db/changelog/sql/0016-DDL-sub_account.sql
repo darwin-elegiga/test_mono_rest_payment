@@ -1,0 +1,47 @@
+
+CREATE TABLE virtual_card.sub_accounts (
+	sub_account_id uuid NOT NULL,
+	claim_office_phone_number varchar(256) NULL,
+	claim_office_phone_number_extension varchar(256) NULL,
+	claim_officeurl varchar(256) NULL,
+	contact_email varchar(250) NULL,
+	fax_number varchar(50) NULL,
+	funding_method varchar(50) NULL,
+	hold_and_release bool NULL,
+	market_type varchar(50) NULL,
+	"name" varchar(250) NULL,
+	payer835id varchar(9) NULL,
+	phone_number varchar(50) NULL,
+	program_id varchar(255) NULL,
+	technical_contact_name varchar(60) NULL,
+	technical_email_address varchar(256) NULL,
+	technical_fax_number varchar(256) NULL,
+	technical_phone_number varchar(256) NULL,
+	technical_phone_number_extension varchar(256) NULL,
+	technicalurl varchar(256) NULL,
+	onboarding_status varchar(20) NULL,
+	tin varchar(9) NOT NULL,
+	address_id int8 NULL,
+	account_id uuid NOT NULL,
+	"type" varchar(50) NULL,
+	sub_account_short_code varchar(20) NULL,
+	has_custom_logo bool NULL,
+	org_short_code varchar(20) NULL,
+	account_short_code varchar(20) NULL,
+	contact_name varchar(100) NULL,
+	funding_foreign_account uuid NULL,
+	funding_local_account uuid NULL,
+	unload_foreign_account uuid NULL,
+	unload_local_account uuid NULL,
+	created_by_id varchar(40) NULL,
+    created_on timestamp(6) NULL,
+    updated_by_id varchar(40) NULL,
+    updated_on timestamp(6) NULL,
+	CONSTRAINT sub_payer_pkey PRIMARY KEY (sub_account_id),
+	--CONSTRAINT ukew3bs9ewugox1cvgkrw1bxp7l UNIQUE (address_id),
+	CONSTRAINT sub_accounts_address_id FOREIGN KEY (address_id) REFERENCES virtual_card.address(id)
+);
+
+
+
+--ALTER TABLE virtual_card.sub_accounts ADD CONSTRAINT fkgbjxxkq0c8q0ou8lbmp5isd36 FOREIGN KEY (address_id) REFERENCES virtual_card.address(id);

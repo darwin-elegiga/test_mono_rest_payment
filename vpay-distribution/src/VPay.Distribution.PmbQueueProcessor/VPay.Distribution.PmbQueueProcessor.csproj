@@ -1,0 +1,71 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+    <DownloadedJarPath>$(ProjectDir)jt400-21.0.5.jar</DownloadedJarPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+    <None Remove="appsettings.Production.json" />
+    <None Remove="appsettings.Staging.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="appsettings.Production.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="appsettings.Staging.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+    
+  <Target Name="DownloadJarWithAuth" BeforeTargets="Restore">
+    <PropertyGroup>
+      <JarUrl>https://centraluhg.jfrog.io/artifactory/glb-maven-central-rem-cache/net/sf/jt400/jt400/21.0.5/jt400-21.0.5.jar</JarUrl>
+    </PropertyGroup>
+
+    <Error
+      Condition="!Exists('$(DownloadedJarPath)') and ('$(JF_USER)' == '' or '$(JF_TOKEN)' == '')"
+      Text="JF_USER and JF_TOKEN are required to download $(DownloadedJarPath). They should be supplied during dotnet restore." />
+
+    <Exec
+      Condition="!Exists('$(DownloadedJarPath)')"
+      Command="curl --fail --show-error --location --retry 3 --retry-all-errors -u $(JF_USER):$(JF_TOKEN) -o &quot;$(DownloadedJarPath)&quot; &quot;$(JarUrl)&quot;" />
+  </Target>
+
+  <Target Name="ForceDownloadBeforeIKVM"
+          BeforeTargets="ResolveIkvmReferences;BeforeResolveReferences"
+          DependsOnTargets="DownloadJarWithAuth">
+    <!--
+      This target intentionally forces DownloadJarWithAuth into the IKVM reference-resolution path.
+      During build, DownloadJarWithAuth should be a no-op if restore already downloaded the jar.
+    -->
+  </Target>
+  
+  <ItemGroup>
+    <PackageReference Include="IKVM" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
+    <PackageReference Include="System.Drawing.Common" />
+    <PackageReference Include="VPay.Extensions.Logging.GrayLog" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <IkvmReference Include="$(DownloadedJarPath)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VPay.Distribution\VPay.Distribution.csproj" />
+  </ItemGroup> 
+
+</Project>

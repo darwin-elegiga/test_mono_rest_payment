@@ -1,0 +1,195 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.8.12023.21
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{BCE6A9AD-66B3-4B04-96CC-883A1E6F2901}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPay.DocSys.Parsing.Tests", "test\VPay.DocSys.Parsing.Tests\VPay.DocSys.Parsing.Tests.csproj", "{A8BCAFD3-7838-4197-AA70-F061B93B6D93}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPay.DocSys.Parsing.Api.Tests", "test\VPay.DocSys.Parsing.Api.Tests\VPay.DocSys.Parsing.Api.Tests.csproj", "{933D68D9-20A7-496E-BBD2-37DC883B92B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8C2E7516-DF7D-4B36-9561-6A3503B25F7B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{19A0B064-DB50-4C79-B396-1B37CA055A06}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		.gitlab-ci.yml = .gitlab-ci.yml
+		Dockerfile.bogner = Dockerfile.bogner
+		nuget.config = nuget.config
+		README.md = README.md
+		vitals.yml = vitals.yml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPay.DocSys.Parsing.QueueProcessor.Consolidated", "src\VPay.DocSys.Parsing.QueueProcessor.Consolidated\VPay.DocSys.Parsing.QueueProcessor.Consolidated.csproj", "{68493D1D-C84A-46E2-8AC8-B8D933FA44AB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPay.DocSys.Parsing", "src\VPay.DocSys.Parsing\VPay.DocSys.Parsing.csproj", "{E551471E-EAED-49C0-B646-A0DFDB21CC4B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPay.DocSys.Parsing.Api", "src\VPay.DocSys.Parsing.Api\VPay.DocSys.Parsing.Api.csproj", "{ADEFE5A1-3CF5-41B6-B6EB-A6865A0AA75E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPay.DocSys.Parsing.Common", "src\VPay.DocSys.Parsing.Common\VPay.DocSys.Parsing.Common.csproj", "{0AB4A8A8-E22E-44DC-B4A0-8017C67A64C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPay.DocSys.Parsing.OutboundRedCardDataQueueProcessor", "src\VPay.DocSys.Parsing.OutboundRedCardDataQueueProcessor\VPay.DocSys.Parsing.OutboundRedCardDataQueueProcessor.csproj", "{8322700C-B83C-4EB8-AB67-1A83065167BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QueueProcessors", "QueueProcessors", "{2582CB41-30DE-4D94-9F19-3B9BD6F5B5B1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPay.DocSys.Parsing.InventoryDriverQueueProcessor", "src\VPay.DocSys.Parsing.InventoryDriverQueueProcessor\VPay.DocSys.Parsing.InventoryDriverQueueProcessor.csproj", "{2840A282-4551-4602-A03C-B6EE54D04CA9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPay.DocSys.Parsing.Common.Tests", "test\VPay.DocSys.Parsing.Common.Tests\VPay.DocSys.Parsing.Common.Tests.csproj", "{CD776BAF-2306-4861-9B46-5B6E2C9D0B65}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPay.DocSys.Parsing.Inbound835FileQueueProcessor", "src\VPay.DocSys.Parsing.Inbound835FileQueueProcessor\VPay.DocSys.Parsing.Inbound835FileQueueProcessor.csproj", "{4965F6AF-5ACB-4DDB-8004-D10D931D1907}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPay.DocSys.Parsing.QueueProcessor.Consolidated.Tests", "test\VPay.DocSys.Parsing.QueueProcessor.Consolidated.Tests\VPay.DocSys.Parsing.QueueProcessor.Consolidated.Tests.csproj", "{8D1C26B5-21F1-457C-AB84-1FB68EE70290}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPay.DocSys.Parsing.Inbound835FileQueueProcessor.Tests", "test\VPay.DocSys.Parsing.Inbound835FileQueueProcessor.Tests\VPay.DocSys.Parsing.Inbound835FileQueueProcessor.Tests.csproj", "{CF5DE70E-7267-4112-A8FF-23D868144878}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPay.DocSys.Parsing.InventoryDriverQueueProcessor.Tests", "test\VPay.DocSys.Parsing.InventoryDriverQueueProcessor.Tests\VPay.DocSys.Parsing.InventoryDriverQueueProcessor.Tests.csproj", "{F59E186F-215A-4CD5-B395-D0DBEB5A1221}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPay.DocSys.Parsing.OutboundRedCardDataQueueProcessor.Tests", "test\VPay.DocSys.Parsing.OutboundRedCardDataQueueProcessor.Tests\VPay.DocSys.Parsing.OutboundRedCardDataQueueProcessor.Tests.csproj", "{B523B9C6-52F0-4F2D-B647-4AE4E13A4711}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPay.DocSys.Parsing.Http", "src\VPay.DocSys.Parsing.Http\VPay.DocSys.Parsing.Http.csproj", "{AB56E23D-0FB5-475C-9097-018A8DE3E832}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VPay.DocSys.Parsing.Http.Tests", "test\VPay.DocSys.Parsing.Http.Tests\VPay.DocSys.Parsing.Http.Tests.csproj", "{9C2BBB7A-3CF6-4F32-804E-38B86BD92053}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{DE867065-18BB-42CB-91CF-DFDFE6A914F6}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\cue-build-and-deploy-dev.yml = .github\workflows\cue-build-and-deploy-dev.yml
+		.github\workflows\cue-configmap-deploy.yml = .github\workflows\cue-configmap-deploy.yml
+		.github\workflows\cue-deploy-prod.yml = .github\workflows\cue-deploy-prod.yml
+		.github\workflows\cue-deploy-stage.yml = .github\workflows\cue-deploy-stage.yml
+		.github\workflows\offload-from-bamboo-parsing-api.yml = .github\workflows\offload-from-bamboo-parsing-api.yml
+		.github\workflows\offload-from-bamboo-queue-processor.yml = .github\workflows\offload-from-bamboo-queue-processor.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "non-tpa", "non-tpa", "{8920DCEA-61C3-4C54-A2A9-A7A91F94F6CA}"
+	ProjectSection(SolutionItems) = preProject
+		non-tpa\inventory.ini = non-tpa\inventory.ini
+		non-tpa\playbook-deploy-parsing-api.yaml = non-tpa\playbook-deploy-parsing-api.yaml
+		non-tpa\playbook-deploy-parsing-queue-processor.yaml = non-tpa\playbook-deploy-parsing-queue-processor.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cac", "cac", "{0B34DDDA-B3EA-4C09-B715-B8A3EF072F5B}"
+	ProjectSection(SolutionItems) = preProject
+		cac\main.cue = cac\main.cue
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{AAB76E43-BEE4-4D3C-B0C6-8B6471913154}"
+	ProjectSection(SolutionItems) = preProject
+		cac\config\base.cue = cac\config\base.cue
+		cac\config\dev.cue = cac\config\dev.cue
+		cac\config\prod.cue = cac\config\prod.cue
+		cac\config\stage.cue = cac\config\stage.cue
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{B0DA2C48-ED86-4928-8DD3-43595F6FFF79}"
+	ProjectSection(SolutionItems) = preProject
+		cac\scripts\generate-dev.sh = cac\scripts\generate-dev.sh
+		cac\scripts\generate-prod.sh = cac\scripts\generate-prod.sh
+		cac\scripts\generate-stage.sh = cac\scripts\generate-stage.sh
+		cac\scripts\validate.sh = cac\scripts\validate.sh
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCE6A9AD-66B3-4B04-96CC-883A1E6F2901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCE6A9AD-66B3-4B04-96CC-883A1E6F2901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCE6A9AD-66B3-4B04-96CC-883A1E6F2901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCE6A9AD-66B3-4B04-96CC-883A1E6F2901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8BCAFD3-7838-4197-AA70-F061B93B6D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8BCAFD3-7838-4197-AA70-F061B93B6D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8BCAFD3-7838-4197-AA70-F061B93B6D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8BCAFD3-7838-4197-AA70-F061B93B6D93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{933D68D9-20A7-496E-BBD2-37DC883B92B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{933D68D9-20A7-496E-BBD2-37DC883B92B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{933D68D9-20A7-496E-BBD2-37DC883B92B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{933D68D9-20A7-496E-BBD2-37DC883B92B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68493D1D-C84A-46E2-8AC8-B8D933FA44AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68493D1D-C84A-46E2-8AC8-B8D933FA44AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68493D1D-C84A-46E2-8AC8-B8D933FA44AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68493D1D-C84A-46E2-8AC8-B8D933FA44AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E551471E-EAED-49C0-B646-A0DFDB21CC4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E551471E-EAED-49C0-B646-A0DFDB21CC4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E551471E-EAED-49C0-B646-A0DFDB21CC4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E551471E-EAED-49C0-B646-A0DFDB21CC4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADEFE5A1-3CF5-41B6-B6EB-A6865A0AA75E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADEFE5A1-3CF5-41B6-B6EB-A6865A0AA75E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADEFE5A1-3CF5-41B6-B6EB-A6865A0AA75E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADEFE5A1-3CF5-41B6-B6EB-A6865A0AA75E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AB4A8A8-E22E-44DC-B4A0-8017C67A64C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AB4A8A8-E22E-44DC-B4A0-8017C67A64C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AB4A8A8-E22E-44DC-B4A0-8017C67A64C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AB4A8A8-E22E-44DC-B4A0-8017C67A64C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8322700C-B83C-4EB8-AB67-1A83065167BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8322700C-B83C-4EB8-AB67-1A83065167BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8322700C-B83C-4EB8-AB67-1A83065167BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8322700C-B83C-4EB8-AB67-1A83065167BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2840A282-4551-4602-A03C-B6EE54D04CA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2840A282-4551-4602-A03C-B6EE54D04CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2840A282-4551-4602-A03C-B6EE54D04CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2840A282-4551-4602-A03C-B6EE54D04CA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD776BAF-2306-4861-9B46-5B6E2C9D0B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD776BAF-2306-4861-9B46-5B6E2C9D0B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD776BAF-2306-4861-9B46-5B6E2C9D0B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD776BAF-2306-4861-9B46-5B6E2C9D0B65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4965F6AF-5ACB-4DDB-8004-D10D931D1907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4965F6AF-5ACB-4DDB-8004-D10D931D1907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4965F6AF-5ACB-4DDB-8004-D10D931D1907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4965F6AF-5ACB-4DDB-8004-D10D931D1907}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D1C26B5-21F1-457C-AB84-1FB68EE70290}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D1C26B5-21F1-457C-AB84-1FB68EE70290}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D1C26B5-21F1-457C-AB84-1FB68EE70290}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D1C26B5-21F1-457C-AB84-1FB68EE70290}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF5DE70E-7267-4112-A8FF-23D868144878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF5DE70E-7267-4112-A8FF-23D868144878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF5DE70E-7267-4112-A8FF-23D868144878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF5DE70E-7267-4112-A8FF-23D868144878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F59E186F-215A-4CD5-B395-D0DBEB5A1221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F59E186F-215A-4CD5-B395-D0DBEB5A1221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F59E186F-215A-4CD5-B395-D0DBEB5A1221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F59E186F-215A-4CD5-B395-D0DBEB5A1221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B523B9C6-52F0-4F2D-B647-4AE4E13A4711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B523B9C6-52F0-4F2D-B647-4AE4E13A4711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B523B9C6-52F0-4F2D-B647-4AE4E13A4711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B523B9C6-52F0-4F2D-B647-4AE4E13A4711}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB56E23D-0FB5-475C-9097-018A8DE3E832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB56E23D-0FB5-475C-9097-018A8DE3E832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB56E23D-0FB5-475C-9097-018A8DE3E832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB56E23D-0FB5-475C-9097-018A8DE3E832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C2BBB7A-3CF6-4F32-804E-38B86BD92053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C2BBB7A-3CF6-4F32-804E-38B86BD92053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C2BBB7A-3CF6-4F32-804E-38B86BD92053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C2BBB7A-3CF6-4F32-804E-38B86BD92053}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A8BCAFD3-7838-4197-AA70-F061B93B6D93} = {8C2E7516-DF7D-4B36-9561-6A3503B25F7B}
+		{933D68D9-20A7-496E-BBD2-37DC883B92B7} = {8C2E7516-DF7D-4B36-9561-6A3503B25F7B}
+		{68493D1D-C84A-46E2-8AC8-B8D933FA44AB} = {2582CB41-30DE-4D94-9F19-3B9BD6F5B5B1}
+		{8322700C-B83C-4EB8-AB67-1A83065167BD} = {2582CB41-30DE-4D94-9F19-3B9BD6F5B5B1}
+		{2840A282-4551-4602-A03C-B6EE54D04CA9} = {2582CB41-30DE-4D94-9F19-3B9BD6F5B5B1}
+		{CD776BAF-2306-4861-9B46-5B6E2C9D0B65} = {8C2E7516-DF7D-4B36-9561-6A3503B25F7B}
+		{4965F6AF-5ACB-4DDB-8004-D10D931D1907} = {2582CB41-30DE-4D94-9F19-3B9BD6F5B5B1}
+		{8D1C26B5-21F1-457C-AB84-1FB68EE70290} = {8C2E7516-DF7D-4B36-9561-6A3503B25F7B}
+		{CF5DE70E-7267-4112-A8FF-23D868144878} = {8C2E7516-DF7D-4B36-9561-6A3503B25F7B}
+		{F59E186F-215A-4CD5-B395-D0DBEB5A1221} = {8C2E7516-DF7D-4B36-9561-6A3503B25F7B}
+		{B523B9C6-52F0-4F2D-B647-4AE4E13A4711} = {8C2E7516-DF7D-4B36-9561-6A3503B25F7B}
+		{9C2BBB7A-3CF6-4F32-804E-38B86BD92053} = {8C2E7516-DF7D-4B36-9561-6A3503B25F7B}
+		{DE867065-18BB-42CB-91CF-DFDFE6A914F6} = {19A0B064-DB50-4C79-B396-1B37CA055A06}
+		{8920DCEA-61C3-4C54-A2A9-A7A91F94F6CA} = {19A0B064-DB50-4C79-B396-1B37CA055A06}
+		{0B34DDDA-B3EA-4C09-B715-B8A3EF072F5B} = {19A0B064-DB50-4C79-B396-1B37CA055A06}
+		{AAB76E43-BEE4-4D3C-B0C6-8B6471913154} = {0B34DDDA-B3EA-4C09-B715-B8A3EF072F5B}
+		{B0DA2C48-ED86-4928-8DD3-43595F6FFF79} = {0B34DDDA-B3EA-4C09-B715-B8A3EF072F5B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FDE1AA7-6E98-448E-A395-E5E5928E2A66}
+	EndGlobalSection
+EndGlobal

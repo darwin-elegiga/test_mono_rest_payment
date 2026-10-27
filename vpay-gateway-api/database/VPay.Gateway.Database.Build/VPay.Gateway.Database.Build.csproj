@@ -1,0 +1,41 @@
+﻿<Project Sdk="MSBuild.Sdk.SqlProj/4.0.0">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <SqlServerVersion>Sql140</SqlServerVersion>
+    <ImplicitUsings>disable</ImplicitUsings>
+
+    <!-- Exclude the project from analysis for now - https://github.com/rr-wfm/MSBuild.Sdk.SqlProj/issues/197 -->
+    <SonarQubeExclude>true</SonarQubeExclude>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\VPay.Gateway.Database\**\*.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="..\VPay.Gateway.Database\bin\**\*.sql" />
+    <Content Remove="..\VPay.Gateway.Database\Post-Deployment\**\*.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Post-Deployment\**\*.sql" />
+    <None Include="Post-Deployment\**\*.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PostDeploy Include=".\Post-Deployment\Script.LocalPostDeployment.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Post-Deployment\db\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_CopyPostDeployment Include="../VPay.Gateway.Database/Post-Deployment/*.*" />
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Copy SourceFiles="@(_CopyPostDeployment)" DestinationFolder="Post-Deployment\db" SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" Retries="3" RetryDelayMilliseconds="300" />
+  </Target>
+</Project>

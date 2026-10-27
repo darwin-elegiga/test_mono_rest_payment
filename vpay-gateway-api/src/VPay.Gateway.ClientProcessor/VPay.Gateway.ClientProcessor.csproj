@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <UserSecretsId>dotnet-VPay.Gateway.ClientProcessor-9426F77B-5FBE-4587-9286-8D087521AF2A</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Identity" />
+    <PackageReference Include="MassTransit" />
+    <PackageReference Include="MassTransit.AspNetCore" />
+    <PackageReference Include="MassTransit.RabbitMQ" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
+    <PackageReference Include="Refit.HttpClientFactory" />
+    <PackageReference Include="VPay.Extensions.Caching.Memory" />
+    <PackageReference Include="VPay.Extensions.Logging.GrayLog" />
+    <PackageReference Include="VPay.MassTransit.DependencyInjection" />
+    <PackageReference Include="Roslynator.Analyzers" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\database\VPay.Gateway.Data.Sql\VPay.Gateway.Data.Sql.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.Guidewire\VPay.Gateway.Common.Guidewire.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.PepClaims\VPay.Gateway.Common.PepClaims.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.PlatformConfig\VPay.Gateway.Common.PlatformConfig.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common\VPay.Gateway.Common.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.MassTransit\VPay.Gateway.Common.MassTransit.csproj" />
+  </ItemGroup>
+</Project>

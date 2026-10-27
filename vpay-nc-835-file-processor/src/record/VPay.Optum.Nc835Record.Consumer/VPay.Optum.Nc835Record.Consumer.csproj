@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <UserSecretsId>dotnet-VPay.Optum.Nc835Record.Consumer-6E394A11-429F-42C3-ADAE-4305CD01054B</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.11" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.23.0" />
+    <PackageReference Include="VPay.Extensions.Caching.Memory" Version="2.0.0" />
+    <PackageReference Include="VPay.Extensions.HealthChecks" Version="2.0.0" />
+    <PackageReference Include="VPay.Extensions.Logging.GrayLog" Version="2.0.0" />
+    <PackageReference Include="VPay.MassTransit.DependencyInjection" Version="3.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\VPay.Optum.Http.DocSysGeneration\VPay.Optum.Http.DocSysGeneration.csproj" />
+    <ProjectReference Include="..\..\VPay.Optum.Http\VPay.Optum.Http.csproj" />
+    <ProjectReference Include="..\..\VPay.Optum\VPay.Optum.csproj" />
+    <ProjectReference Include="..\VPay.Optum.Nc835Record.Application\VPay.Optum.Nc835Record.Application.csproj" />
+  </ItemGroup>
+</Project>

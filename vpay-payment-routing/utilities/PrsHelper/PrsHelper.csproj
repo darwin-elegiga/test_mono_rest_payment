@@ -1,0 +1,92 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPublishable>True</IsPublishable>
+  </PropertyGroup>
+ 
+  <ItemGroup>
+    <ContentWithTargetPath Include="options\options-local.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <TargetPath>options-local.json</TargetPath>
+    </ContentWithTargetPath>
+ 
+    <ContentWithTargetPath Include="options\options.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <TargetPath>options.json</TargetPath>
+    </ContentWithTargetPath>
+
+    <ContentWithTargetPath Include="options\options-manisha.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <TargetPath>options-manisha.json</TargetPath>
+    </ContentWithTargetPath>
+    
+    <ContentWithTargetPath Include="options\options-nozip.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <TargetPath>options-nozip.json</TargetPath>
+    </ContentWithTargetPath>
+
+    <ContentWithTargetPath Include="templates\sample-batch.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <TargetPath>sample-batch.json</TargetPath>
+    </ContentWithTargetPath>
+
+
+    <ContentWithTargetPath Include="templates\sample-dum-batch.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <TargetPath>sample-dum-batch.json</TargetPath>
+    </ContentWithTargetPath>
+
+    <ContentWithTargetPath Include="templates\sample-hso-batch.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <TargetPath>sample-hso-batch.json</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="templates\sample-mclaren-batch.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <TargetPath>sample-mclaren-batch.json</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="templates\sample-mclaren-subpayer-batch.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <TargetPath>sample-mclaren-subpayer-batch.json</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="templates\sample-medwise-batch.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <TargetPath>sample-medwise-batch.json</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="templates\sample-mum-batch.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <TargetPath>sample-mum-batch.json</TargetPath>
+    </ContentWithTargetPath>
+
+    <ContentWithTargetPath Include="templates\sample-dum-supersized-batch.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <TargetPath>sample-dum-supersized-batch.json</TargetPath>
+    </ContentWithTargetPath>
+    
+    
+    <None Include="options\options-manisha.json" />
+    <None Include="options\options-nozip.json" />
+    <None Include="options\options-local.json" />
+    <None Include="options\options.json" />
+    <None Include="templates\sample-dum-supersized-batch.json" />
+    <None Include="templates\sample-batch.json" />
+    <None Include="templates\sample-dum-batch.json" />
+    <None Include="templates\sample-hso-batch.json" />
+    <None Include="templates\sample-mclaren-batch.json" />
+    <None Include="templates\sample-medwise-batch.json" />
+    <None Include="templates\sample-mum-batch.json" />
+    <None Include="options" />
+    <None Include="templates" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.9.1" />
+    <PackageReference Include="PdfSharpCore" Version="1.3.67" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties options_4options-nozip_1json__JsonSchema="https://beaujs.com/schema.json" /></VisualStudio></ProjectExtensions>
+
+</Project>

@@ -1,0 +1,29 @@
+﻿using Microsoft.Extensions.Diagnostics.HealthChecks;
+
+namespace VPay.Distribution.Http.Abstractions
+{
+    public class ApiHealthCheck<TApiInterface> : IHealthCheck
+        where TApiInterface : class
+    {
+        private readonly TApiInterface _api;
+        private readonly Func<TApiInterface, Task<HealthStatus>> _ensureHealth;
+
+        public ApiHealthCheck(TApiInterface api, Func<TApiInterface, Task<HealthStatus>> ensureHealth)
+        {
+            _api = api;
+            _ensureHealth = ensureHealth;
+        }
+
+        public async Task<HealthCheckResult> CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                return new HealthCheckResult(await _ensureHealth(_api));
+            }
+            catch (Exception e)
+            {
+                return new HealthCheckResult(HealthStatus.Unhealthy, exception: e);
+            }
+        }
+    }
+}

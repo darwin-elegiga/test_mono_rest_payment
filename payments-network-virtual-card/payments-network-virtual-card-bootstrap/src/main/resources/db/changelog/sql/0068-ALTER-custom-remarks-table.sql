@@ -1,0 +1,15 @@
+ALTER TABLE virtual_card.VIRTUAL_CARD_DOCUMENT_CUSTOM_REMARKS
+    DROP COLUMN IF EXISTS org_id,
+    DROP COLUMN IF EXISTS account_id,
+    DROP COLUMN IF EXISTS sub_account_id,
+    DROP COLUMN IF EXISTS logo_url,
+    DROP COLUMN IF EXISTS custom_remarks3,
+    DROP COLUMN IF EXISTS custom_remarks4,
+    DROP COLUMN IF EXISTS custom_remarks5,
+    DROP COLUMN IF EXISTS custom_remarks6;
+
+ALTER TABLE virtual_card.VIRTUAL_CARD_DOCUMENT_CUSTOM_REMARKS
+    ADD COLUMN org_short_code VARCHAR(20),
+    ADD COLUMN account_short_code VARCHAR(20),
+    ADD COLUMN sub_account_short_code VARCHAR(20),
+    ADD COLUMN created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;

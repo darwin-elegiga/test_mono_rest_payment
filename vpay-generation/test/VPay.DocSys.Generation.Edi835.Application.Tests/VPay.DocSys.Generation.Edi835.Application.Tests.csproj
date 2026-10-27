@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="docs\EHI\EHI0001001\FSEHI00001\106574327_SEMED_EHI_EHI0001001_DENTAL-UNIVERSAL2013081200001_1004572346_DD_0000000000.docs" />
+    <None Remove="docs\HEQTN\HEQTN01001\FSHEQTN001\466000069_SEMED_HEQTN_HEQTN01001_16NEWABC_1003798248_DD_0000000000.docs" />
+    <None Remove="docs\SWK\SWK0001001\FSSWK00001\999999999_IC_SWK_SWK0001001_A0019189742MEMAX07_1004553741_DD_0000000000.docs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docs\EHI\EHI0001001\FSEHI00001\106574327_SEMED_EHI_EHI0001001_DENTAL-UNIVERSAL2013081200001_1004572346_DD_0000000000.docs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="docs\HEQTN\HEQTN01001\FSHEQTN001\466000069_SEMED_HEQTN_HEQTN01001_16NEWABC_1003798248_DD_0000000000.docs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="docs\SWK\SWK0001001\FSSWK00001\999999999_IC_SWK_SWK0001001_A0019189742MEMAX07_1004553741_DD_0000000000.docs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Bogus" />
+    <PackageReference Include="FluentAssertions" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Moq" />
+    <PackageReference Include="System.IO.Abstractions.TestingHelpers" />
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="xunit.runner.visualstudio">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\VPay.DocSys.Generation.Edi835.Application\VPay.DocSys.Generation.Edi835.Application.csproj" />
+  </ItemGroup>
+</Project>

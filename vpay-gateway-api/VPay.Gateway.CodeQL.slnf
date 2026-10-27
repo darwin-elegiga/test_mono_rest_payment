@@ -1,0 +1,31 @@
+{
+  "solution": {
+    "path": "VPay.Gateway.sln",
+    "projects": [
+      "database\\VPay.Gateway.Data.Sql\\VPay.Gateway.Data.Sql.csproj",
+      "database\\VPay.Gateway.Data\\VPay.Gateway.Data.csproj",
+      "src\\VPay.Gateway.Api\\VPay.Gateway.Api.csproj",
+      "src\\VPay.Gateway.Application\\VPay.Gateway.Application.csproj",
+      "src\\VPay.Gateway.ClientProcessor\\VPay.Gateway.ClientProcessor.csproj",
+      "src\\VPay.Gateway.Common.Documents\\VPay.Gateway.Common.Documents.csproj",
+      "src\\VPay.Gateway.Common.Enrollments\\VPay.Gateway.Common.Enrollments.csproj",
+      "src\\VPay.Gateway.Common.Guidewire\\VPay.Gateway.Common.Guidewire.csproj",
+      "src\\VPay.Gateway.Common.Kubera\\VPay.Gateway.Common.Kubera.csproj",
+      "src\\VPay.Gateway.Common.Loaf\\VPay.Gateway.Common.Loaf.csproj",
+      "src\\VPay.Gateway.Common.MassTransit\\VPay.Gateway.Common.MassTransit.csproj",
+      "src\\VPay.Gateway.Common.PepClaims\\VPay.Gateway.Common.PepClaims.csproj",
+      "src\\VPay.Gateway.Common.PlatformConfig\\VPay.Gateway.Common.PlatformConfig.csproj",
+      "src\\VPay.Gateway.Common.Preferencing\\VPay.Gateway.Common.Preferencing.csproj",
+      "src\\VPay.Gateway.Common.Recon\\VPay.Gateway.Common.Recon.csproj",
+      "src\\VPay.Gateway.Common.RestPayments\\VPay.Gateway.Common.RestPayments.csproj",
+      "src\\VPay.Gateway.Common.UserManagement\\VPay.Gateway.Common.UserManagement.csproj",
+      "src\\VPay.Gateway.Common\\VPay.Gateway.Common.csproj",
+      "src\\VPay.Gateway.Identity\\VPay.Gateway.Identity.csproj",
+      "src\\VPay.Gateway.Management.Api\\VPay.Gateway.Management.Api.csproj",
+      "src\\VPay.Gateway.Management.Application\\VPay.Gateway.Management.Application.csproj",
+      "src\\documents\\VPay.Gateway.DocumentsProcessor.Abstractions\\VPay.Gateway.DocumentsProcessor.Abstractions.csproj",
+      "src\\documents\\VPay.Gateway.DocumentsProcessor.Consumer\\VPay.Gateway.DocumentsProcessor.Consumer.csproj",
+      "src\\payments\\VPay.Gateway.PaymentProcessor.Consumer\\VPay.Gateway.PaymentProcessor.Consumer.csproj"
+    ]
+  }
+}

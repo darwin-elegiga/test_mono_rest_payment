@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="VPay.Extensions.UserManagement.Abstractions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\database\VPay.Gateway.Data\VPay.Gateway.Data.csproj" />
+    <ProjectReference Include="..\..\database\VPay.Gateway.Data.Sql\VPay.Gateway.Data.Sql.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.Documents\VPay.Gateway.Common.Documents.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.Enrollments\VPay.Gateway.Common.Enrollments.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.Kubera\VPay.Gateway.Common.Kubera.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.PlatformConfig\VPay.Gateway.Common.PlatformConfig.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.Preferencing\VPay.Gateway.Common.Preferencing.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.RestPayments\VPay.Gateway.Common.RestPayments.csproj" />
+    <ProjectReference Include="..\Vpay.Gateway.Common.Vpay\Vpay.Gateway.Common.Vpay.csproj" />
+  </ItemGroup>
+</Project>

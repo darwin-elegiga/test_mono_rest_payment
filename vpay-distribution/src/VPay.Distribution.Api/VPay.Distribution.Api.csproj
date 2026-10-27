@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" />
+    <PackageReference Include="GlobalExceptionHandler" />
+    <PackageReference Include="MicroElements.Swashbuckle.FluentValidation" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" PrivateAssets="All" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+    <PackageReference Include="VPay.DocSys.HealthChecks" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.AspNetcore" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.FileSystem" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.HttpEndpoint" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.RabbitMQ" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.SqlServer" />
+    <PackageReference Include="VPay.Extensions.Logging.GrayLog" />
+    <PackageReference Include="System.Drawing.Common" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VPay.Distribution\VPay.Distribution.csproj" />
+  </ItemGroup>
+</Project>

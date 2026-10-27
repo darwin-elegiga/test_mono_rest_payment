@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <nullable>enable</nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.0.1" />
+    <PackageReference Include="VPay.Extensions.Caching.Abstractions" Version="2.0.0" />
+    <PackageReference Include="VPay.Extensions.Exceptions" Version="2.0.0" />
+    <PackageReference Include="VPay.MassTransit.Abstractions" Version="3.0.8" />
+    <PackageReference Include="VPay.Optum.Data.Sql" Version="0.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\VPay.Optum.Http.ConfigApi\VPay.Optum.Http.ConfigApi.csproj" />
+    <ProjectReference Include="..\..\VPay.Optum.Http.DocSysGeneration\VPay.Optum.Http.DocSysGeneration.csproj" />
+    <ProjectReference Include="..\..\VPay.Optum.Http.Loaf\VPay.Optum.Http.Loaf.csproj" />
+    <ProjectReference Include="..\..\VPay.Optum.Http.Transactions\VPay.Optum.Http.Transactions.csproj" />
+    <ProjectReference Include="..\..\VPay.Optum\VPay.Optum.csproj" />
+  </ItemGroup>
+</Project>

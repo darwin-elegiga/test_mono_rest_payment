@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>VPay.Optum.PaymentRouting.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{1cd5b7bd-a1eb-46a8-a0a5-06b6ec6b420b}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>VPay.Optum.PaymentRouting.Database</RootNamespace>
+    <AssemblyName>VPay.Optum.PaymentRouting.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="LocalTesting" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Stored Procedures" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\Types" />
+    <Folder Include="Post-Deployment" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Post-Deployment\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="VPay.Optum.PaymentRouting.Database.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LocalTesting\Test_Script.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundBatch_GetManifest.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundBatch_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundBatch_Summary.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundBatchStatusHistory_GetByInboundBatchId.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundBatchStatus_Update.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundHeader_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundHeader_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundPayment_GetBy_UserKey_Payer835Id.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundPayment_GetBy_UserKey_Payer835Id_MetaDataOnly.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundPayment_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundPayment_Insert.sql" />
+    <Build Include="dbo\Tables\ClobStorage.sql" />
+    <Build Include="dbo\Tables\InboundBatch.sql" />
+    <None Include="VPay.Optum.PaymentRouting.Database.dev.publish.xml" />
+    <None Include="VPay.Optum.PaymentRouting.Database.migrate.publish.xml" />
+    <None Include="SqlSchemaCompare.scmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\InboundBatchStatusHistory.sql" />
+    <Build Include="dbo\Tables\InboundHeader.sql" />
+    <Build Include="dbo\Tables\InboundPayment.sql" />
+    <Build Include="dbo\Tables\ApMessageTracking.sql" />
+    <Build Include="dbo\Tables\ApMessageTrackingStatus.sql" />
+    <Build Include="dbo\Tables\OutboundPaymentClob.sql" />
+    <Build Include="dbo\Tables\Outbound835File.sql" />
+    <Build Include="dbo\Tables\Outbound835FileStatus.sql" />
+    <Build Include="dbo\Tables\Outbound835FileTransaction.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundPayment_Update_Status.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundPayment_Update_RefEo.sql" />
+    <Build Include="dbo\Stored Procedures\usp_OutboundPaymentClob_Insert.sql" />
+    <Build Include="dbo\Tables\InboundPaymentStatusHistory.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ApMessageTracking_GetByApMessageId.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ApMessageTracking_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ApMessageTrackingStatus_UpdateStatus.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundPayment_GetByStatus.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Outbound835File_Insert.sql" />
+    <Build Include="dbo\Types\IdTable.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ApMessageTracking_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundHeader_GetByOptumBatchId.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundHeader_GetByInboundPaymentId.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Outbound835File_UpdateStatus.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Outbound835File_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundHeader_GetByBatchId.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Outbound835File_Update_FilePath.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundBatch_GetByOptumBatchId.sql" />
+    <Build Include="dbo\Stored Procedures\usp_OutboundPaymentClob_GetBy_InboundPaymentId.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundPayment_Update_UserKey.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundBatch_Update_Totals.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundBatch_IncompleteBatchDetails.sql" />
+    <Build Include="dbo\Functions\udf_Outbound835FileStatus.sql" />
+    <Build Include="dbo\Functions\udf_InboundPaymentStatus.sql" />
+    <Build Include="dbo\Functions\udf_BatchStatus.sql" />
+    <Build Include="dbo\Functions\udf_ApMessageTrackingStatus.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Outbound835File_FinSeg_Insert.sql" />
+    <Build Include="dbo\Tables\OutboundFinSegSequence.sql" />
+    <Build Include="dbo\Stored Procedures\usp_OutboundFinSegSequence_GetNextId.sql" />
+    <Build Include="dbo\Stored Procedures\usp_OutboundFinSegSequence_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundPayment_Get_MetaData_ByStatus.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundBatch_CancelAllPayments.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundPayment_GetByBatchIdWithoutClob.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InboundPayment_Update_Status_ByIds.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Outbound835File_GetFinSegInfo.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Outbound835FileTransactionIds_By_Outbound835FileId.sql" />
+    <Build Include="dbo\Tables\RemittanceAdviceFile.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RemittanceAdviceFile_Insert.sql" />
+    <Build Include="dbo\Views\vwRemittanceAdviceFile.sql" />
+    <Build Include="dbo\Views\vwInboundBatchDetails.sql" />
+    <Build Include="dbo\Views\vwRemittanceAdviceFileAgingReport.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Outbound835File_GetByInboundPaymentId.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ApMessageTracking_GetByInboundPaymentId.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Outbound835Data_GetByTransactionId.sql" />
+    <Build Include="dbo\Tables\ApMessage.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ApMessage_Insert.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ApMessage_Update.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ApMessage_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ApMessage_GetByTransactionIdAndApMessageType.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ApMessage_GetListByTransactionId.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ApMessage_GetListByTransactionIds.sql" />
+  </ItemGroup>
+</Project>

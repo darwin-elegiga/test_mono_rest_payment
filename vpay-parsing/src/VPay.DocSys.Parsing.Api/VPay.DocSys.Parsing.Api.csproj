@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
+      <!--<RuntimeIdentifiers>win10-x64;win10-x86;centos.7-x64;</RuntimeIdentifiers>--> 
+    <SuppressDockerTargets>True</SuppressDockerTargets>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <!-- <DocumentationFile>bin\Debug\net10.0\VPay.DocSys.Parsing.Api.xml</DocumentationFile> -->
+    <NoWarn>1701;1702;1705;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <!-- <DocumentationFile>bin\Release\net10.0\VPay.DocSys.Parsing.Api.xml</DocumentationFile> -->
+    <NoWarn>1701;1702;1705;1591;NU1701</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" />
+    <PackageReference Include="GlobalExceptionHandler" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+    <PackageReference Include="System.Drawing.Common" />
+    <PackageReference Include="VPay.DocSys.HealthChecks" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.AspNetcore" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.FileSystem" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.HttpEndpoint" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.Network" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.Odbc" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.RabbitMQ" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.SqlServer" />
+    <PackageReference Include="VPay.DocSys.HealthChecks.StorageManager" />
+    <PackageReference Include="VPay.Queuing.DependencyInjection" />
+    <PackageReference Include="VPay.Extensions.Logging.GrayLog" />
+    <PackageReference Include="Refit.HttpClientFactory" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VPay.DocSys.Parsing\VPay.DocSys.Parsing.csproj" />
+  </ItemGroup>
+</Project>

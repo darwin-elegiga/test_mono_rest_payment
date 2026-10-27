@@ -1,0 +1,7 @@
+- vpay-generation @ main 09dff092d51685f409456cf61608c0c9a9536b73
+- vpay-distribution @ main 82c3218a712ea4cc945177500e1da24aee8059f8
+- vpay-payment-routing @ main ff247b9accef378af28d8257c34fbbee882c4541
+- vpay-parsing @ main 40f0fd947f6e56f12df7a1664d59240adc2e1029
+- vpay-nc-835-file-processor @ main a04458044a528954bf71f3417ced0bbaced26cde
+- vpay-gateway-api @ main dcdfd8dbdbdef56040497f9582479aaf5c7eb16f
+- payments-network-virtual-card @ main 14eb7bf0a11949cd8f188693b019e1c17cb31680

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="System.Drawing.Common" />
+    <PackageReference Include="System.IO.Abstractions" />
+    <PackageReference Include="VPay.Data.Db2.Odbc" />
+    <PackageReference Include="VPay.DocSys.Common" />
+    <PackageReference Include="VPay.DocSys.Data" />
+    <PackageReference Include="VPay.DocSys.PdfTools" />
+    <PackageReference Include="VPay.DocSys.Storage" />
+    <PackageReference Include="VPay.Queuing" />
+    <PackageReference Include="VPay.Queuing.Abstractions" />
+    <PackageReference Include="VPay.Queuing.DependencyInjection" />
+    <PackageReference Include="VPay.Extensions.Logging.GrayLog" />
+    <PackageReference Include="VPay.Extensions.Ssh" />
+
+  </ItemGroup>
+</Project>

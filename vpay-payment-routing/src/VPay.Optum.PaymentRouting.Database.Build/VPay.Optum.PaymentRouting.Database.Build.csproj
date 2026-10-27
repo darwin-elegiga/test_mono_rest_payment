@@ -1,0 +1,52 @@
+﻿<Project Sdk="MSBuild.Sdk.SqlProj/4.0.0">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <SqlServerVersion>Sql150</SqlServerVersion>
+    <IsPackable>false</IsPackable>
+
+    <!-- Exclude the project from analysis for now - https://github.com/rr-wfm/MSBuild.Sdk.SqlProj/issues/197 -->
+    <SonarQubeExclude>true</SonarQubeExclude>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\VPay.Optum.PaymentRouting.Database\**\*.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="..\VPay.Optum.PaymentRouting.Database\LocalTesting\**\*.sql" />
+    <Content Remove="..\VPay.Optum.PaymentRouting.Database\bin\**\*.sql" />
+    <Content Remove="..\VPay.Optum.PaymentRouting.Database\obj\**\*.sql" />
+    <Content Remove="..\VPay.Optum.PaymentRouting.Database\Post-Deployment\**\*.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\VPay.Optum.PaymentRouting.Database\VPay.Optum.PaymentRouting.Database.refactorlog" />
+    <RefactorLog Include="..\VPay.Optum.PaymentRouting.Database\VPay.Optum.PaymentRouting.Database.refactorlog" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Post-Deployment\**\*.sql" />
+    <None Include="Post-Deployment\**\*.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PostDeploy Include=".\Post-Deployment\Script.LocalPostDeployment.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Post-Deployment\db\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_CopyPostDeployment Include="../VPay.Optum.PaymentRouting.Database/Post-Deployment/*.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="..\VPay.Optum.PaymentRouting.Database\dbo\Stored Procedures\usp_InboundBatch_IncompleteBatchDetailsV2.sql" />
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Copy SourceFiles="@(_CopyPostDeployment)" DestinationFolder="Post-Deployment\db" SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" Retries="3" RetryDelayMilliseconds="300" />
+  </Target>
+</Project>

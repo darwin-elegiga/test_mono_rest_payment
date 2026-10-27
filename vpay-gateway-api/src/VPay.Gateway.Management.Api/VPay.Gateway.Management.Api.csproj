@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+    <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.Redis" />
+    <PackageReference Include="AspNetCore.HealthChecks.Uris" />
+    <PackageReference Include="AutoMapper" />
+    <PackageReference Include="Hellang.Middleware.ProblemDetails" />
+    <PackageReference Include="FluentValidation.AspNetCore" />
+    <PackageReference Include="MicroElements.Swashbuckle.FluentValidation" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
+    <PackageReference Include="Polly.Caching.Distributed" />
+    <PackageReference Include="Refit.HttpClientFactory" />
+    <PackageReference Include="StackExchange.Redis" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" />
+    <PackageReference Include="VPay.AspNetCore.Logging" />
+    <PackageReference Include="VPay.AspNetCore.Mvc" />
+    <PackageReference Include="VPay.AspNetCore.SwashBuckle" />
+    <PackageReference Include="VPay.AspNetCore.SwashBuckle.HealthChecks" />
+    <PackageReference Include="VPay.Extensions.Caching.Memory" />
+    <PackageReference Include="VPay.Extensions.Logging.GrayLog" />
+    <PackageReference Include="VPay.MassTransit.DependencyInjection" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\database\VPay.Gateway.Data.Sql\VPay.Gateway.Data.Sql.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.Documents\VPay.Gateway.Common.Documents.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.Enrollments\VPay.Gateway.Common.Enrollments.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.Kubera\VPay.Gateway.Common.Kubera.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.Loaf\VPay.Gateway.Common.Loaf.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.MemberClaims\VPay.Gateway.Common.MemberClaims.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.PlatformConfig\VPay.Gateway.Common.PlatformConfig.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.Preferencing\VPay.Gateway.Common.Preferencing.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.Recon\VPay.Gateway.Common.Recon.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.RestPayments\VPay.Gateway.Common.RestPayments.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Common.UserManagement\VPay.Gateway.Common.UserManagement.csproj" />
+    <ProjectReference Include="..\Vpay.Gateway.Common.Vpay\Vpay.Gateway.Common.Vpay.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.Management.Application\VPay.Gateway.Management.Application.csproj" />
+  </ItemGroup>
+</Project>

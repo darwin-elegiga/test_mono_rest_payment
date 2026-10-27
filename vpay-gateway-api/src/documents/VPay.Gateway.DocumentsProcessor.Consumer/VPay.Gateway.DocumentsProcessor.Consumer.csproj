@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <UserSecretsId>dotnet-VPay.Gateway.DocumentsProcessor.Consumer-C25F3434-50C7-4456-AB29-56730F235C70</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" />
+    <PackageReference Include="MassTransit.AspNetCore" />
+    <PackageReference Include="MassTransit.RabbitMQ" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
+    <PackageReference Include="VPay.EventBus.DependencyInjection" />
+    <PackageReference Include="VPay.EventBus.Messages.DocSys" />
+    <PackageReference Include="VPay.Extensions.Caching.Memory" />
+    <PackageReference Include="VPay.Extensions.Logging.GrayLog" />
+    <PackageReference Include="VPay.MassTransit.DependencyInjection" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\database\VPay.Gateway.Data.Sql\VPay.Gateway.Data.Sql.csproj" />
+    <ProjectReference Include="..\..\VPay.Gateway.Common.Guidewire\VPay.Gateway.Common.Guidewire.csproj" />
+    <ProjectReference Include="..\..\VPay.Gateway.Common.Kubera\VPay.Gateway.Common.Kubera.csproj" />
+    <ProjectReference Include="..\..\VPay.Gateway.Common.PlatformConfig\VPay.Gateway.Common.PlatformConfig.csproj" />
+    <ProjectReference Include="..\..\VPay.Gateway.Common.MassTransit\VPay.Gateway.Common.MassTransit.csproj" />
+    <ProjectReference Include="..\..\VPay.Gateway.Common\VPay.Gateway.Common.csproj" />
+    <ProjectReference Include="..\VPay.Gateway.DocumentsProcessor.Abstractions\VPay.Gateway.DocumentsProcessor.Abstractions.csproj" />
+  </ItemGroup>
+</Project>
